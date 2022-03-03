@@ -1,7 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
+// import { Router, Switch } from 'Router';
+// import Header from './Components/Header/Header.js';
+// import RecipeDisplay from './Components/RecipeDisplay/RecipeDisplay.js';
 
-function App() {
+
+const App = () => {
   return (
     <div className="App">
       <header className="App-header">
