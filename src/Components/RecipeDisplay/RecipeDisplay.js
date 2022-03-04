@@ -1,5 +1,5 @@
 import './RecipeDisplay.scss';
-import RecipeCard from '../RecipeCard.js/RecipeCard';
+import RecipeCard from '../RecipeCard/RecipeCard';
 
 const RecipeDisplay = (props) => {
   // let cards = props.recipes.map(recipe => <RecipeCard />);

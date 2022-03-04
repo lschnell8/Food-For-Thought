@@ -1,4 +1,5 @@
 import './RecipeCard.scss';
+import '../../'
 
 const RecipeCard = () => {
   return (
