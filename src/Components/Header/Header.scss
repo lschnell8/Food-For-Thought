@@ -1,0 +1,30 @@
+@use '../../styles/variables' as var;
+@use '../../styles/mixins' as mix;
+
+header {
+  background: var.$yellow;
+  display: flex;
+  width: 100vw;
+  height: 10rem;
+  align-items: center;
+  justify-content: space-around;
+  font-family: var.$headerFont;
+}
+
+span {
+  font-family: Source Sans Pro;
+  font-weight: 300;
+  font-style: italic;
+  font-size: 1.75rem;
+}
+
+input {
+  height: 2rem;
+  border-radius: 8px;
+}
+
+button {
+  height: 2rem;
+  width: 4rem;
+  border-radius: 8px;
+}

@@ -1,13 +1,11 @@
+@use '../src/styles/variables' as var;
+@import '../node_modules/@csstools/normalize.css/normalize.css';
+// @import '../node_modules/@csstools/normalize.css/opinionated.css';
+
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: var.$bodyFont;
+  font-size: 3rem;
+  overscroll-behavior: none;
 }

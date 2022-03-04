@@ -1,29 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
-// import { Router, Switch } from 'Router';
-// import Header from './Components/Header/Header.js';
-// import RecipeDisplay from './Components/RecipeDisplay/RecipeDisplay.js';
+import { useEffect, useState } from 'react'
+import './App.scss';
+import { fetchApi } from './apiCalls'
+import { Route, Switch } from 'react-router-dom';
+import Header from './Components/Header/Header.js';
+import RecipeDisplay from './Components/RecipeDisplay/RecipeDisplay.js';
+import RecipeDetails from './Components/RecipeDetails/RecipeDetails.js';
 
 
 const App = () => {
+
+  const [recipes, setRecipes] = useState([]);
+
+  // useEffect(() => {
+  //   fetchApi()
+  //     .then((data) => setRecipes(data))
+  // })
+
+  const filterRecipes = (inputValue) => {
+    return recipes.filter(recipe => recipe.name.toLowerCase().includes(inputValue))
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Switch>
+      <Route path='/'>
+        <Header />
+        <RecipeDisplay />
+      </Route>
+      <Route path='/:id'>
+        <Header />
+        <RecipeDetails />
+      </Route>
+    </Switch>
   );
-}
+};
 
 export default App;
