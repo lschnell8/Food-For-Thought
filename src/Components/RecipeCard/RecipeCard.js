@@ -1,5 +1,5 @@
 import './RecipeCard.scss';
-import '../../'
+import anatomicFood from '../../../'
 
 const RecipeCard = () => {
   return (
