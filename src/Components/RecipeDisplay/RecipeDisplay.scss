@@ -1,0 +1,9 @@
+@use '../../styles/variables' as var;
+@use '../../styles/mixins' as mix;
+
+.recipe-display {
+  @include mix.flex-layout(normal, wrap, normal, center, center);
+  height: 100%;
+  margin: 3%;
+  border: 2px solid green;
+}

@@ -1,0 +1,10 @@
+@use './variables' as var;
+
+@mixin flex-layout ($direction, $wrap, $align-con, $justify, $align-it) {
+  display: flex;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+  align-content: $align-con;
+  justify-content: $justify;
+  align-items: $align-it;
+}

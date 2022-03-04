@@ -3,19 +3,19 @@
 
 header {
   background: var.$yellow;
-  display: flex;
-  width: 100vw;
-  height: 10rem;
-  align-items: center;
-  justify-content: space-around;
   font-family: var.$headerFont;
+  height: 8rem;
+  @include mix.flex-layout(normal, nowrap, normal, space-between, center);
+  padding: 2%;
+  font-size: 90%;
 }
 
 span {
-  font-family: Source Sans Pro;
+  // font-family: var.$bodyFont;
   font-weight: 300;
   font-style: italic;
-  font-size: 1.75rem;
+  font-size: 36%;
+  // font-size: 1.75rem;
 }
 
 input {
@@ -31,4 +31,5 @@ button {
   border-radius: 8px;
   border: none;
   margin-left: 5px;
+  font-family: var.$bodyFont;
 }
