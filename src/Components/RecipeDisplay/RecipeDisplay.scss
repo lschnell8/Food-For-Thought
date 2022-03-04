@@ -3,7 +3,7 @@
 
 .recipe-display {
   @include mix.flex-layout(normal, wrap, normal, center, center);
-  height: 100%;
+  // height: 100%;
   margin: 3%;
   border: 2px solid green;
 }

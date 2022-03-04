@@ -1,13 +1,14 @@
 import './RecipeCard.scss';
-import anatomicFood from '../../assets/anatomicFood.jpeg'
+import { Link } from 'react-router-dom';
 
-const RecipeCard = () => {
-  let num = 0;
-  return (
-    <article className='recipe-card'>
-      <img className='recipe-small' src={anatomicFood} alt='Recipe Name'></img>
-      <h2 className='recipe-title'>Recipe Name{num}</h2>
-    </article>
+const RecipeCard = ({name, image}) => {
+    return (
+      <article className='recipe-card'>
+        <Link to={`/${name}`}>
+          <img className='recipe-small' src={image} alt='Recipe Name'></img>
+        </Link>
+        <h2 className='recipe-title'>{name}</h2>
+      </article>
   )
 };
 

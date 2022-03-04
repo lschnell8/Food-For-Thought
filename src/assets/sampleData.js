@@ -1,4 +1,4 @@
-const recipes = [
+const recipeData = [
   {
     name: 'Greek Orzo Salad Recipe',
     image: 'https://www.acouplecooks.com/wp-content/uploads/2019/05/Greek-Orzo-Salad-053.jpg', 
@@ -486,29 +486,27 @@ const recipes = [
     ],
   },
   {
-    name: 'Baked Shrimp with Feta and Tomatoes',
-    image: 'https://www.acouplecooks.com/wp-content/uploads/2015/03/Baked-Shrimp-with-Feta-and-Tomatoes.jpg', 
+    name: 'Easy Baked Shrimp',
+    image: 'https://www.acouplecooks.com/wp-content/uploads/2020/02/Baked-Shrimp-001.jpg', 
     ingredients: [
-      '1 medium yellow onion',
-      '2 cloves garlic',
-      '1 tablespoon olive oil',
-      '28-ounce can diced fire roasted tomatoes',
-      '¼ cup fresh parsley, minced',
-      '1 pound medium raw shrimp, peeled, deveined and shells removed (thawed if frozen)',
-      '2/3 cup feta crumbled cheese',
+      '1 pound large shrimp, deveined (tail on or off)',
+      '2 tablespoons olive oil',
+      '2 garlic cloves',
+      '½ teaspoon dried oregano*',
+      '½ teaspoon onion powder',
       '½ teaspoon kosher salt',
-      'Fresh ground pepper',
-      'Lemon'
+      'Lemon wedges',
+      'Chopped parsley or cilantro, for garnish'
     ], 
     instructions: [
-      'Preheat oven to 425°F.',
-      'Finely dice the onion. Mince the garlic.',
-      'In a large ovenproof skillet over medium-high heat, heat the olive oil. Add the onion and cook until soft, 3-5 minutes. Add the garlic and cook until fragrant, about 30 seconds more. Add the tomatoes and bring to a simmer. Reduce the heat and let the sauce simmer for 5 to 8 minutes, until the juices thicken a bit.',
-      'While the vegetables cook, mince ¼ cup fresh parsley.',
-      'Remove the sauce from the heat, and stir in the parsley, shrimp, feta cheese, kosher salt, and several grinds of fresh pepper.',
-      'Place the skillet in the oven and bake until the shrimp are cooked through, about 8-10 minutes. Garnish with fresh parsley and a squeeze of lemon juice. Serve immediately with bread, rice, quinoa, or couscous.'
+      'Preheat the oven to 400 degrees Fahrenheit or preheat the broiler.',
+      'If frozen, thaw the shrimp. ',
+      'Mince the garlic. Pat the shrimp dry. In a medium bowl, toss with the shrimp with the olive oil, garlic, oregano, onion powder, and kosher salt.',
+      'Baked method: Line a baking sheet with parchment paper. Place the shrimp on a baking sheet in an even layer. Place the baking sheet in the oven and bake until juicy and opaque, about 4 to 6 minutes depending on the size of the shrimp.',
+      'Broiler method: Place the shrimp on a baking sheet in an even layer. Place the baking sheet in the broiler and broil for 3 to 6 minutes, until juicy and opaque, rotating the tray as necessary for even cooking.',
+      'Spritz with fresh lemon juice from lemon wedges, sprinkle with chopped parsley or cilantro, and serve immediately.'
     ],
   },
 ];
 
-export { recipes };
+export { recipeData };
