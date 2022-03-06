@@ -4,17 +4,23 @@
 .recipe-details {
   font-size: .25em;
   display: flex;
-  
+  line-height: 30px;
+  padding-left: 3%;
 }
 
 .image-large {
-  width: 50%;
+  width: 85%;
+}
+
+h2 {
+  font-size: 2em;
+  color: var.$dijonYellow;
 }
 
 .title-style {
-
+  flex: 1;
 }
 
-.ingredients {
-
+.instructions {
+  flex: 1;
 }
