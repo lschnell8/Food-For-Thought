@@ -1,5 +1,5 @@
 import './RecipeDetails.scss';
-import { Route } from 'react-router-dom'
+// import { Route } from 'react-router-dom'
 import PropTypes from 'prop-types';
 
 const RecipeDetails = ({ recipes, name }) => {
@@ -12,7 +12,7 @@ const RecipeDetails = ({ recipes, name }) => {
 
       <section className='recipe-details'>
         <div className='title-style'>
-          <h2>{ selectedRecipe.name }</h2>
+          <h2 className='selected-name'>{ selectedRecipe.name }</h2>
           <img className='image-large' src={ selectedRecipe.image } alt={selectedRecipe.name} />
         {/* <div className='ingredients'> */}
           <h3>Ingredients</h3>

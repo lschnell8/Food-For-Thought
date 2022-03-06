@@ -6,7 +6,10 @@ import PropTypes from 'prop-types';
 const Header = ({ getFilterRecipes }) => {
   return (
     <header>
-      <h1>Food For Thought<span> - Eat, Don't Die</span></h1>
+      <section className='logo'>
+        <h1>Food For Thought</h1>
+        <p> - Eat, Don't Die</p>
+      </section>
       <Route exact path='/'>
         <Form getFilterRecipes={ getFilterRecipes } />
       </Route>

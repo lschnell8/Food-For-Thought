@@ -8,7 +8,9 @@ const RecipeCard = ({ name, image }) => {
         <Link to={`/${ name }`}>
           <img className='image-small' src={ image } alt={ name }/>
         </Link>
-        <h2 className='recipe-title'>{ name }</h2>
+        <div className='recipe-title'>
+          <h2>{ name }</h2>
+        </div>
       </article>
   )
 };

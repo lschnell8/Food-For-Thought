@@ -5,21 +5,35 @@ header {
   background: var.$yellow;
   font-family: var.$headerFont;
   height: 2.75em;
-  @include mix.flex-layout(normal, nowrap, normal, space-between, center);
+  @include mix.flex-layout(row, nowrap, normal, space-between, center);
   padding: 2%;
+
+  .logo {
+    flex: 1;
+    @include mix.flex-layout(row, nowrap, normal, normal, baseline);
+  }
+
+  h1 {
+    font-size: 4em;
+  }
+
+  p {
+    font-size: 3em;
+    font-style: italic;
+    font-weight: 200;
+  }
 }
 
-span {
-  font-weight: 300;
-  font-style: italic;
-  font-size: .35em;
-}
 
 input {
   height: 2.5em;
   border-radius: 8px;
   outline: none;
   border: none;
+}
+
+input:placeholder-shown {
+  text-indent: 10%;
 }
 
 button {
@@ -29,4 +43,25 @@ button {
   border: none;
   margin-left: 5px;
   font-family: var.$bodyFont;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  header {
+    padding: 5%;
+
+    .logo {
+      @include mix.flex-layout(column, wrap, normal, normal, normal);
+    }
+
+    h1 {
+      font-size: 2em;
+      margin: 0;
+    }
+
+    p {
+      font-size: 1.5em;
+      margin: 0;
+    }
+  }
+
 }

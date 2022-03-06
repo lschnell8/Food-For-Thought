@@ -2,16 +2,16 @@
 @use '../../styles/mixins' as mix;
 
 .recipe-card {
-  @include mix.flex-layout(column, nowrap, normal, normal, center);
-  width: 19%;
-  margin: .5%;
   background: var.$green;
-}
-
-.image-small {
-  width: 100%;
-}
-
-.recipe-title {
-  font-size: 30%;
+  box-shadow: 2px 2px 4px 1px #2f2f2f;
+  @include mix.flex-layout(column, nowrap, normal, normal, center);
+  
+  .image-small {
+    width: 100%;
+  }
+  
+  .recipe-title {
+    margin: 5%;
+    text-align: center;
+  }
 }

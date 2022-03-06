@@ -12,7 +12,7 @@ const Form = ({ getFilterRecipes }) => {
   return (
     <form>
       {console.log('onchange', searchInput)}
-      <input type='search' placeholder='   Search...' onChange={(event) => handleChange(event) }></input>
+      <input type='search' placeholder='Search...' onChange={(event) => handleChange(event) }></input>
     </form>
   )
 };
