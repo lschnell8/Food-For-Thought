@@ -1,4 +1,4 @@
-describe('Home page', () => {
+describe('Landing page', () => {
 
   it('Should display a heading, a form, and recipe cards', () => {
     // cy.intercept("GET", `API URL`)
@@ -12,7 +12,6 @@ describe('Home page', () => {
       .should('be.visible')
       .get('.recipe-card')
       .should('be.visible')
-
   })
 
   it('Should show an error message if the page fails to load', () => {

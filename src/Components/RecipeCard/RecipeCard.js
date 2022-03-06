@@ -1,5 +1,6 @@
 import './RecipeCard.scss';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 const RecipeCard = ({ name, image }) => {
     return (
@@ -11,5 +12,10 @@ const RecipeCard = ({ name, image }) => {
       </article>
   )
 };
+
+RecipeCard.propTypes = {
+  name: PropTypes.string,
+  image: PropTypes.string
+}
 
 export default RecipeCard;

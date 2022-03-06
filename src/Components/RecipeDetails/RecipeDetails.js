@@ -1,4 +1,5 @@
 import './RecipeDetails.scss';
+import PropTypes from 'prop-types';
 
 const RecipeDetails = ({ recipes, id }) => {
   let selectedRecipe = recipes.find((recipe) => {
@@ -30,6 +31,11 @@ const RecipeDetails = ({ recipes, id }) => {
       </div>
     </section>
   )
+};
+
+RecipeDetails.propTypes = {
+  recipes: PropTypes.array,
+  id: PropTypes.string
 };
 
 export default RecipeDetails;

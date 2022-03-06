@@ -10,7 +10,7 @@ import { recipeData } from './assets/sampleData';
 
 const App = () => {
   const [recipes, setRecipes] = useState([]);
-  const [filteredRecipes, setFilteredRecipes] = useState('');
+  const [filteredRecipes, setFilteredRecipes] = useState([]);
 
   useEffect(() => {
     //   fetchApi()
@@ -21,14 +21,14 @@ const App = () => {
   const getFilterRecipes = (inputValue) => {
     //UPDATE TO FILTER BY INGREDIENTS OR ADD OPTIONS TO SELECT A FILTER BY TYPE AND INCLUDE A NEW FILTER FOR FILTERING BY INGREDIENT OR MAYBE A SELECTOR THAT GIVES YOU PROTEIN OPTIONS TO FILTER BY??
     let filteredRecipes = recipes.filter(recipe => recipe.name.toLowerCase().includes(inputValue.toLowerCase()))
-    setFilteredRecipes(filteredRecipes)
+    setFilteredRecipes([...filteredRecipes])
   }
 
   return (
     <main>
       {console.log('appState', filteredRecipes)}
       <Header  getFilterRecipes={ getFilterRecipes } />
-      <Switch>
+      {/* <Switch> */}
         <Route exact path='/'>
           <RecipeDisplay recipes={recipes} filteredRecipes={ filteredRecipes }/>
         </Route>
@@ -36,7 +36,7 @@ const App = () => {
           console.log('match', match)
           return (<RecipeDetails recipes={ recipes } id={ match.params.id }/>)
         }} />
-      </Switch>
+      {/* </Switch> */}
     </main>
   );
 };

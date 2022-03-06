@@ -2,8 +2,9 @@ describe('Recipe Details', () => {
 
   it('Should display a header, the recipe name, an image, the ingredients, and the instructions', () => {
     cy.visit(`http://localhost:3000/`)
+      .get("header")
       .contains("h1", "Food For Thought - Eat, Don't Die")
-
+      .contains("button", "Back")
       .get(".recipe-details")
       .should("be.visible")
       .contains("h2", "Mediterranean Tuna Salad")

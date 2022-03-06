@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 
 const Form = ({ getFilterRecipes }) => {
   const [searchInput, setSearchInput] = useState({});
@@ -15,5 +16,9 @@ const Form = ({ getFilterRecipes }) => {
     </form>
   )
 };
+
+Form.propTypes = {
+  getFilterRecipes: PropTypes.func
+}
 
 export default Form;
