@@ -8,6 +8,7 @@ const RecipeDisplay = ({ recipes, filteredRecipes }) => {
   //If no recipes match the input value, display a message "No matches found." Conditionally render message here based on whether or not the input has a value that isn't ''. Add conditon to getFiltered recipes to return a "No matches found." message if the array is empty.
 
   let cards = recipesToDisplay.map(recipe => {
+    
     return (
       <RecipeCard
         key={recipe.name}

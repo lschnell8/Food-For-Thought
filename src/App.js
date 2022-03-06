@@ -27,16 +27,27 @@ const App = () => {
   return (
     <main>
       {console.log('appState', filteredRecipes)}
-      <Header  getFilterRecipes={ getFilterRecipes } />
+      <Header getFilterRecipes={getFilterRecipes} />
       {/* <Switch> */}
-        <Route exact path='/'>
-          <RecipeDisplay recipes={recipes} filteredRecipes={ filteredRecipes }/>
+        <Route exact path='/:id' render={({ match }) => {
+          return <RecipeDetails recipes={ recipes } id={ match.params.id }/>
+        } }>
         </Route>
-        <Route path={`/:id`} render={({ match }) => {
-          console.log('match', match)
-          return (<RecipeDetails recipes={ recipes } id={ match.params.id }/>)
-        }} />
+        <Route exact path='/'>
+          <RecipeDisplay recipes={recipes} filteredRecipes={filteredRecipes} />
+        </Route>
+        {/* <Route path='*'> */}
+
+        {/* </Route> */}
       {/* </Switch> */}
+        {/* <Route exact path='/' render={() =>  */}
+          {/* <RecipeDisplay recipes={recipes} filteredRecipes={ filteredRecipes }/> */}
+        {/* } /> */}
+        {/* </Route> */}
+        {/* <Route path='/:id' render={({ match }) => { */}
+          {/* console.log('match', match) */}
+          {/* return <RecipeDetails recipes={ recipes } id={ match.params.id }/> */}
+        {/* }} /> */}
     </main>
   );
 };

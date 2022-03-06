@@ -6,7 +6,7 @@ const RecipeCard = ({ name, image }) => {
     return (
       <article className='recipe-card'>
         <Link to={`/${ name }`}>
-          <img className='recipe-small' src={ image } alt={ name }/>
+          <img className='image-small' src={ image } alt={ name }/>
         </Link>
         <h2 className='recipe-title'>{ name }</h2>
       </article>
@@ -15,7 +15,8 @@ const RecipeCard = ({ name, image }) => {
 
 RecipeCard.propTypes = {
   name: PropTypes.string,
-  image: PropTypes.string
+  image: PropTypes.string,
+  // id: PropTypes.number
 }
 
 export default RecipeCard;
