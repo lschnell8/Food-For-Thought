@@ -12,16 +12,22 @@ const RecipeDetails = ({ recipes, id }) => {
   let recipeInstructions = selectedRecipe.instructions.map(instruction => <li key={key++}>{ instruction }</li>);
   return (
     <section className='recipe-details'>
-      <h2>{ selectedRecipe.name }</h2>
-      <img className='recipe-large' src={ selectedRecipe.image } alt={selectedRecipe.name}></img>
-      <h3>Ingredients</h3>
-      <ul>
-        { recipeIngredients }
-      </ul>
-      <h3>Instructions</h3>
-      <ol>
-        { recipeInstructions }
-      </ol>
+      <div className='title-style'>
+        <h2>{ selectedRecipe.name }</h2>
+        <img className='image-large' src={ selectedRecipe.image } alt={selectedRecipe.name} />
+      </div>
+      <div className='ingredients'>
+        <h3>Ingredients</h3>
+        <ul>
+          { recipeIngredients }
+        </ul>
+      </div>
+      <div className='instructions'>
+        <h3>Instructions</h3>
+        <ol>
+          { recipeInstructions }
+        </ol>
+      </div>
     </section>
   )
 };

@@ -9,6 +9,9 @@ const Header = ({ filteredRecipes, getFilterRecipes }) => {
       <Route exact path='/'>
         <Form getFilterRecipes={ getFilterRecipes } filterRecipes={ getFilterRecipes }/>
       </Route>
+      <Route path='/:id'>
+
+      </Route>
     </header>
   )
 };

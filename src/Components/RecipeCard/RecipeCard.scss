@@ -3,8 +3,7 @@
 
 .recipe-card {
   @include mix.flex-layout(column, nowrap, normal, normal, center);
-  width: 10rem;
-  // height: 18rem;
+  width: 19%;
   margin: .5%;
   background: var.$green;
 }

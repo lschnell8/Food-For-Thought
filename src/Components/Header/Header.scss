@@ -4,22 +4,19 @@
 header {
   background: var.$yellow;
   font-family: var.$headerFont;
-  height: 8rem;
+  height: 2.75em;
   @include mix.flex-layout(normal, nowrap, normal, space-between, center);
   padding: 2%;
-  font-size: 90%;
 }
 
 span {
-  // font-family: var.$bodyFont;
   font-weight: 300;
   font-style: italic;
-  font-size: 36%;
-  // font-size: 1.75rem;
+  font-size: .35em;
 }
 
 input {
-  height: 2rem;
+  height: 2.5em;
   border-radius: 8px;
   outline: none;
   border: none;
