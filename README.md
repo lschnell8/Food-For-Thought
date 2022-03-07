@@ -19,7 +19,8 @@ This was a 5 day long Turing School of Software and Design Module 3 final solo p
 
 ## Deployed Site
 
-Coming soon!
+[Food For Thought UI](https://git.heroku.com/whispering-island-50737.git)
+[Food For Thought API](https://guarded-oasis-26838.herokuapp.com/)
 
 ## Visual
 
