@@ -1,3 +1,3 @@
 export const fetchApi = () => {
-  return fetch(`http://localhost:3001/api/v1/recipes`)
+  return fetch(`https://guarded-oasis-26838.herokuapp.com/api/v1/recipes`)
 }

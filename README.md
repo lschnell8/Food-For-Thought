@@ -15,12 +15,14 @@
 
 ## Abstract 
 
-This was a 5 day long Turing School of Software and Design Module 3 final solo project.  You can find the original project specs [HERE](https://frontend.turing.edu/projects/module-3/showcase.html). This web app allows for users to navigate through recipes from a fetched API. The app presents users with an extensive list of Mediterranean recipes. My inspiration for this project was to provide heart healthy recipes to a loved one. I hope to expand on this project in the future to provide more prescribed diet plans. Along with this UI repo, a custom API was built to provide data [Mediterranean-Recipes-API](https://github.com/lschnell8/Mediterranean-Recipes-API.git)
+This was a 5 day long Turing School of Software and Design Module 3 final solo project.  You can find the original project specs [HERE](https://frontend.turing.edu/projects/module-3/showcase.html). This web app allows for users to navigate through recipes from a fetched API. The app presents users with an extensive list of Mediterranean recipes. My inspiration for this project was to provide heart healthy recipes to a loved one. I hope to expand on this project in the future to provide more prescribed diet plans. Along with this UI repo, a custom API was built to provide data [Mediterranean-Recipes-API](https://guarded-oasis-26838.herokuapp.com/api/v1/recipes)
 
 ## Deployed Site
 
-[Food For Thought UI](https://git.heroku.com/whispering-island-50737.git)
-[Food For Thought API](https://guarded-oasis-26838.herokuapp.com/)
+[Food For Thought UI](https://whispering-island-50737.herokuapp.com/)
+[Food For Thought API](https://guarded-oasis-26838.herokuapp.com/api/v1/recipes)
+
+
 
 ## Visual
 
