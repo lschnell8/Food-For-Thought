@@ -1,44 +1,63 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react';
 import './App.scss';
-// import { fetchApi } from './apiCalls'
+import { fetchApi } from './apiCalls';
 import { Route, Switch } from 'react-router-dom';
 import Header from './Components/Header/Header.js';
 import RecipeDisplay from './Components/RecipeDisplay/RecipeDisplay.js';
 import RecipeDetails from './Components/RecipeDetails/RecipeDetails.js';
-import { recipeData } from './assets/sampleData';
+import ErrorDisplay from './Components/ErrorDisplay/ErrorDisplay.js';
+// import { recipeData } from './assets/sampleData';
 
 
 const App = () => {
   const [recipes, setRecipes] = useState([]);
   const [filteredRecipes, setFilteredRecipes] = useState([]);
+  const [error, setError] = useState(0);
 
   useEffect(() => {
-    //   fetchApi()
-    //     .then((data) => setRecipes(data))
-    setRecipes([...recipeData])
+    fetchApi()
+      .then((response) => {
+        if (response.ok) {
+          return response.json();
+        } else {
+          setError(response.status)
+        }
+      })
+      .then((data) => {
+        let recipesWithIds = data.map(recipe => {
+          let index = data.indexOf(recipe);
+            recipe.id = index
+            return recipe
+          })
+        setRecipes([...recipesWithIds])
+      })
   }, [])
 
   const getFilterRecipes = (inputValue) => {
-    //UPDATE TO FILTER BY INGREDIENTS OR ADD OPTIONS TO SELECT A FILTER BY TYPE AND INCLUDE A NEW FILTER FOR FILTERING BY INGREDIENT OR MAYBE A SELECTOR THAT GIVES YOU PROTEIN OPTIONS TO FILTER BY??
     let filteredRecipes = recipes.filter(recipe => recipe.name.toLowerCase().includes(inputValue.toLowerCase()))
     setFilteredRecipes([...filteredRecipes])
+  }
+
+  const getSelectedRecipe = (id) => {
+    return recipes.find(recipe => recipe.id === id)
+    
   }
 
   return (
     <main>
       <Header getFilterRecipes={getFilterRecipes} />
       <Switch>
-      <Route path='/:name' render={({ match }) => {
-        console.log('match', match.params)
-          return <RecipeDetails recipes={ recipes } name={ match.params.name }/>
-        } }>
-        </Route>
         <Route exact path='/'>
-          <RecipeDisplay recipes={recipes} filteredRecipes={filteredRecipes} />
+          <RecipeDisplay recipes={recipes} filteredRecipes={filteredRecipes} error={error}/>
         </Route>
-        {/* <Route path='*'> */}
-
-        {/* </Route> */}
+        <Route path={`/recipe/:id`} render={({ match }) => {
+          const matchId = parseInt(match.params.id)
+          const currentRecipe = getSelectedRecipe(matchId)
+          return <RecipeDetails currentRecipe={currentRecipe} />
+        } } />
+        <Route path='*'>
+          <ErrorDisplay error={error} />
+        </Route>
       </Switch>
     </main>
   );
