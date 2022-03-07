@@ -50,9 +50,12 @@ const App = () => {
         <Route exact path='/'>
           <RecipeDisplay recipes={recipes} filteredRecipes={filteredRecipes} error={error}/>
         </Route>
-        <Route path={`/recipe/:id`} render={({ match }) => {
+        <Route path='/recipe/:id' render={({ match }) => {
           const matchId = parseInt(match.params.id)
           const currentRecipe = getSelectedRecipe(matchId)
+          if (!currentRecipe) {
+            return 'Loading...'
+          }
           return <RecipeDetails currentRecipe={currentRecipe} />
         } } />
         <Route path='*'>
