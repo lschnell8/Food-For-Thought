@@ -1,0 +1,35 @@
+@use '../../styles/variables' as var;
+@use '../../styles/mixins' as mix;
+
+header {
+  background: var.$yellow;
+  font-family: var.$headerFont;
+  height: 8rem;
+  @include mix.flex-layout(normal, nowrap, normal, space-between, center);
+  padding: 2%;
+  font-size: 90%;
+}
+
+span {
+  // font-family: var.$bodyFont;
+  font-weight: 300;
+  font-style: italic;
+  font-size: 36%;
+  // font-size: 1.75rem;
+}
+
+input {
+  height: 2rem;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+}
+
+button {
+  height: 2rem;
+  width: 4rem;
+  border-radius: 8px;
+  border: none;
+  margin-left: 5px;
+  font-family: var.$bodyFont;
+}

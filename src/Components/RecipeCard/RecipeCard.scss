@@ -1,0 +1,18 @@
+@use '../../styles/variables' as var;
+@use '../../styles/mixins' as mix;
+
+.recipe-card {
+  @include mix.flex-layout(column, nowrap, normal, normal, center);
+  width: 10rem;
+  // height: 18rem;
+  margin: .5%;
+  background: var.$green;
+}
+
+.recipe-small {
+  width: 100%;
+}
+
+.recipe-title {
+  font-size: 30%;
+}

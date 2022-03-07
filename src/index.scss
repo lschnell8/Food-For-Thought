@@ -1,0 +1,10 @@
+@use '../src/styles/variables' as var;
+@import '../node_modules/@csstools/normalize.css/normalize.css';
+// @import '../node_modules/@csstools/normalize.css/opinionated.css';
+
+body {
+  margin: 0;
+  font-family: var.$bodyFont;
+  font-size: 3rem;
+  overscroll-behavior: none;
+}
