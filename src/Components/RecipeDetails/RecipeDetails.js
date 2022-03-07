@@ -1,8 +1,8 @@
 import './RecipeDetails.scss';
 import PropTypes from 'prop-types';
 
-const RecipeDetails = ({ recipes, name }) => {
-  let selectedRecipe = recipes.find((recipe) => recipe.name === name)
+const RecipeDetails = ({ recipes, id }) => {
+  let selectedRecipe = recipes.find((recipe) => recipe.id === id)
   let key = 1;
   let recipeIngredients = selectedRecipe.ingredients.map(ingredient => <li key={key++}>{ingredient}</li>);
   let recipeInstructions = selectedRecipe.instructions.map(instruction => <li key={key++}>{ instruction }</li>);
@@ -28,7 +28,7 @@ const RecipeDetails = ({ recipes, name }) => {
 
 RecipeDetails.propTypes = {
   recipes: PropTypes.array,
-  name: PropTypes.string
+  id: PropTypes.number,
 };
 
 export default RecipeDetails;

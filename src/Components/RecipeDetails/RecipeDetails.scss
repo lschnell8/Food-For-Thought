@@ -27,12 +27,15 @@
 @media (min-width: 320px) and (max-width: 767px) {
   .recipe-details {
     flex-direction: column;
-    text-align-last: center;
     padding-right: 3%;
   }
 
-  .title-style > ul {
-    list-style-type: none;
+  .image-large {
+    width: 100%;
+  }
+
+  .instructions {
+    padding-right: 3%;
   }
 
 }
