@@ -1,0 +1,38 @@
+@use '../../styles/variables' as var;
+@use '../../styles/mixins' as mix;
+
+.recipe-details {
+  display: flex;
+  line-height: 30px;
+  padding-left: 3%;
+}
+
+.image-large {
+  width: 85%;
+}
+
+.selected-name {
+  font-size: 2em;
+  color: var.$darkRed;
+}
+
+.title-style {
+  flex: 1;
+}
+
+.instructions {
+  flex: 1;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .recipe-details {
+    flex-direction: column;
+    text-align-last: center;
+    padding-right: 3%;
+  }
+
+  .title-style > ul {
+    list-style-type: none;
+  }
+
+}

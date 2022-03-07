@@ -2,8 +2,25 @@
 @use '../../styles/mixins' as mix;
 
 .recipe-display {
-  @include mix.flex-layout(normal, wrap, normal, center, center);
-  // height: 100%;
-  margin: 3%;
-  border: 2px solid green;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 2em;
+  margin: 5%;
+  padding-bottom: 5%;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .recipe-display {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2em;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .recipe-display {
+    display: grid;
+    grid-template-columns: none;
+    grid-gap: 2em;
+  }
 }

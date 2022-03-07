@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 
 const Form = ({ getFilterRecipes }) => {
   const [searchInput, setSearchInput] = useState({});
@@ -10,10 +11,13 @@ const Form = ({ getFilterRecipes }) => {
 
   return (
     <form>
-      {console.log('onchange', searchInput)}
-      <input type='search' onChange={(event) => handleChange(event) }></input>
+      <input aria-label='search-input' type='search' placeholder='Search...' onChange={ (event) => handleChange(event) }></input>
     </form>
   )
 };
+
+Form.propTypes = {
+  getFilterRecipes: PropTypes.func
+}
 
 export default Form;
