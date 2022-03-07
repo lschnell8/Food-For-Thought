@@ -1,8 +1,10 @@
+import { recipeData } from '../../src/assets/sampleData';
+
 describe('Landing page', () => {
 
   it('Should display a heading, a form, and recipe cards', () => {
-    // cy.intercept("GET", `API URL`)
-    cy.visit(`http://localhost:3000/`)
+    cy.intercept(`http://localhost:3001/api/v1/recipes`, recipeData)
+      .visit(`http://localhost:3000/`)
       .contains("h1", "Food For Thought - Eat, Don't Die")
       .get('input[type="search"]')
       .should("be.visible")

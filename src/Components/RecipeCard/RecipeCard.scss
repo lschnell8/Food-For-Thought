@@ -5,6 +5,7 @@
   background: var.$green;
   box-shadow: 2px 2px 4px 1px #2f2f2f;
   @include mix.flex-layout(column, nowrap, normal, normal, center);
+  height: 100%;
   
   .image-small {
     width: 100%;

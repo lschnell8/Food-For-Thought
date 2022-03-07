@@ -31,12 +31,6 @@ const App = () => {
           })
         setRecipes([...recipesWithIds])
       })
-    // let recipesWithIds = recipeData.map(recipe => {
-    //   let index = recipeData.indexOf(recipe);
-    //   recipe.id = index
-    //   return recipe
-    // })
-    // setRecipes([...recipesWithIds])
   }, [])
 
   const getFilterRecipes = (inputValue) => {
