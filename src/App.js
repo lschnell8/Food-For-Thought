@@ -12,7 +12,7 @@ import ErrorDisplay from './Components/ErrorDisplay/ErrorDisplay.js';
 const App = () => {
   const [recipes, setRecipes] = useState([]);
   const [filteredRecipes, setFilteredRecipes] = useState([]);
-  const [error, setError] = useState(0)
+  const [error, setError] = useState(0);
 
   useEffect(() => {
     fetchApi()
@@ -34,36 +34,33 @@ const App = () => {
   }, [])
 
   const getFilterRecipes = (inputValue) => {
-    //UPDATE TO FILTER BY INGREDIENTS OR ADD OPTIONS TO SELECT A FILTER BY TYPE AND INCLUDE A NEW FILTER FOR FILTERING BY INGREDIENT OR MAYBE A SELECTOR THAT GIVES YOU PROTEIN OPTIONS TO FILTER BY??
     let filteredRecipes = recipes.filter(recipe => recipe.name.toLowerCase().includes(inputValue.toLowerCase()))
     setFilteredRecipes([...filteredRecipes])
-    if (inputValue && !filteredRecipes.length) {
-      setError(`Sorry, there are no recipes matching ${inputValue}`)
-    }
+  }
+
+  const getSelectedRecipe = (id) => {
+    return recipes.find(recipe => recipe.id === id)
+    
   }
 
   return (
     <main>
       <Header getFilterRecipes={getFilterRecipes} />
       <Switch>
-        <Route path='/error'>
+        <Route exact path='/'>
+          <RecipeDisplay recipes={recipes} filteredRecipes={filteredRecipes} error={error}/>
+        </Route>
+        <Route path={`/recipe/:id`} render={({ match }) => {
+          const matchId = parseInt(match.params.id)
+          const currentRecipe = getSelectedRecipe(matchId)
+          return <RecipeDetails currentRecipe={currentRecipe} />
+        } } />
+        <Route path='*'>
           <ErrorDisplay error={error} />
         </Route>
-        <Route path='/:id' render={({ match }) => {
-          const matchId = parseInt(match.params.id)
-          return <RecipeDetails recipes={ recipes } id={ matchId }/>
-        } } />
-        <Route exact path='/'>
-          <RecipeDisplay recipes={recipes} filteredRecipes={filteredRecipes} />
-        </Route>
-        {/* <Route path='*'> */}
-
-        {/* </Route> */}
       </Switch>
     </main>
   );
 };
 
 export default App;
-
-

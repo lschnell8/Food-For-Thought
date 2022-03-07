@@ -1,16 +1,15 @@
 import './RecipeDetails.scss';
 import PropTypes from 'prop-types';
 
-const RecipeDetails = ({ recipes, id }) => {
-  let selectedRecipe = recipes.find((recipe) => recipe.id === id)
+const RecipeDetails = ({ currentRecipe }) => {
   let key = 1;
-  let recipeIngredients = selectedRecipe.ingredients.map(ingredient => <li key={key++}>{ingredient}</li>);
-  let recipeInstructions = selectedRecipe.instructions.map(instruction => <li key={key++}>{ instruction }</li>);
+  let recipeIngredients = currentRecipe.ingredients.map(ingredient => <li key={key++}>{ingredient}</li>);
+  let recipeInstructions = currentRecipe.instructions.map(instruction => <li key={key++}>{ instruction }</li>);
   return (
       <section className='recipe-details'>
         <div className='title-style'>
-          <h2 className='selected-name'>{ selectedRecipe.name }</h2>
-          <img className='image-large' src={ selectedRecipe.image } alt={selectedRecipe.name} />
+          <h2 className='selected-name'>{ currentRecipe.name }</h2>
+          <img className='image-large' src={ currentRecipe.image } alt={currentRecipe.name} />
           <h3>Ingredients</h3>
           <ul>
             { recipeIngredients }
@@ -27,8 +26,7 @@ const RecipeDetails = ({ recipes, id }) => {
 };
 
 RecipeDetails.propTypes = {
-  recipes: PropTypes.array,
-  id: PropTypes.number,
+  currentRecipe: PropTypes.object
 };
 
 export default RecipeDetails;
