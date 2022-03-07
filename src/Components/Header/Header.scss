@@ -44,6 +44,8 @@ button {
   font-family: var.$bodyFont;
   background-color: var.$darkRed;
   background-color: var.$green;
+  font-size: 1.2em;
+  cursor: pointer;
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
