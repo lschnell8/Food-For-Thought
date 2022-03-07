@@ -17,13 +17,12 @@ header {
     font-size: 4em;
   }
 
-  p {
-    font-size: 3em;
+  span {
+    font-size: 2.5em;
     font-style: italic;
     font-weight: 200;
   }
 }
-
 
 input {
   height: 2.5em;
@@ -43,6 +42,8 @@ button {
   border: none;
   margin-left: 5px;
   font-family: var.$bodyFont;
+  background-color: var.$darkRed;
+  background-color: var.$green;
 }
 
 @media (min-width: 320px) and (max-width: 767px) {

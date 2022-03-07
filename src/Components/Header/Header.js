@@ -8,7 +8,7 @@ const Header = ({ getFilterRecipes }) => {
     <header>
       <section className='logo'>
         <h1>Food For Thought</h1>
-        <p> - Eat, Don't Die</p>
+        <span> - Eat, Don't Die</span>
       </section>
       <Route exact path='/'>
         <Form getFilterRecipes={ getFilterRecipes } />

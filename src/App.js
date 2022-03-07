@@ -26,10 +26,9 @@ const App = () => {
 
   return (
     <main>
-      {console.log('appState', filteredRecipes)}
       <Header getFilterRecipes={getFilterRecipes} />
-      {/* <Switch> */}
-      <Route exact path='/:name' render={({ match }) => {
+      <Switch>
+      <Route path='/:name' render={({ match }) => {
         console.log('match', match.params)
           return <RecipeDetails recipes={ recipes } name={ match.params.name }/>
         } }>
@@ -40,15 +39,7 @@ const App = () => {
         {/* <Route path='*'> */}
 
         {/* </Route> */}
-      {/* </Switch> */}
-        {/* <Route exact path='/' render={() =>  */}
-          {/* <RecipeDisplay recipes={recipes} filteredRecipes={ filteredRecipes }/> */}
-        {/* } /> */}
-        {/* </Route> */}
-        {/* <Route path='/:id' render={({ match }) => { */}
-          {/* console.log('match', match) */}
-          {/* return <RecipeDetails recipes={ recipes } id={ match.params.id }/> */}
-        {/* }} /> */}
+      </Switch>
     </main>
   );
 };

@@ -2,7 +2,6 @@
 @use '../../styles/mixins' as mix;
 
 .recipe-details {
-  font-size: .25em;
   display: flex;
   line-height: 30px;
   padding-left: 3%;
@@ -14,7 +13,7 @@
 
 .selected-name {
   font-size: 2em;
-  color: var.$dijonYellow;
+  color: var.$darkRed;
 }
 
 .title-style {
@@ -23,4 +22,17 @@
 
 .instructions {
   flex: 1;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .recipe-details {
+    flex-direction: column;
+    text-align-last: center;
+    padding-right: 3%;
+  }
+
+  .title-style > ul {
+    list-style-type: none;
+  }
+
 }

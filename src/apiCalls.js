@@ -1,3 +1,3 @@
 export const fetchApi = () => {
-  fetch(``)
+  return fetch(``)
 }

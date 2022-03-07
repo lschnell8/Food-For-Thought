@@ -14,7 +14,6 @@ const RecipeDisplay = ({ recipes, filteredRecipes }) => {
         key={recipe.name}
         name={recipe.name}
         image={recipe.image}
-        // id={recipe.name}
       />
     )
   });
