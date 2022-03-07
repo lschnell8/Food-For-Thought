@@ -5,14 +5,26 @@
   display: flex;
   line-height: 30px;
   padding-left: 3%;
+  margin: 5% 10%;
+  white-space: pre-wrap;
 }
 
 .image-large {
-  width: 85%;
+  width: 60%;
+}
+
+h3 {
+  font-size: 2em;
+  line-height: 1em;
+}
+
+li {
+  font-size: 1.2em;
+  line-height: 1.6em;
 }
 
 .selected-name {
-  font-size: 2em;
+  font-size: 2.5em;
   color: var.$darkRed;
 }
 
