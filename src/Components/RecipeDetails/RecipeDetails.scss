@@ -3,10 +3,17 @@
 
 .recipe-details {
   display: flex;
-  line-height: 30px;
   padding-left: 3%;
   margin: 5% 10%;
   white-space: pre-wrap;
+}
+
+.bookmark {
+  width: 8%;
+}
+
+.bookmark-flag {
+  flex-direction: row;
 }
 
 .image-large {

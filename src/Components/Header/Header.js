@@ -9,8 +9,13 @@ const Header = ({ getFilterRecipes }) => {
       <section className='logo'>
         <h1>Food For Thought</h1>
         <span> - Eat, Don't Die</span>
-      </section>
+      </section> 
       <Route exact path='/'>
+        <Link to='/recipes'>
+          <button>Explore Recipes</button>
+        </Link>
+      </Route>
+      <Route exact path='/recipes'>
         <Form getFilterRecipes={ getFilterRecipes } />
       </Route>
       <Route path='/:id'>

@@ -37,7 +37,9 @@ input:placeholder-shown {
 
 button {
   height: 2rem;
-  width: 4rem;
+  width: max-content;
+  padding: 5%;
+  line-height: 0;
   border-radius: 8px;
   border: none;
   margin-left: 5px;
