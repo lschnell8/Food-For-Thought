@@ -33,12 +33,27 @@ const App = () => {
             return recipe
           })
         setRecipes([...recipesWithIds])
+        console.table(recipes)
       })
   }, [])
 
-  const getFilterRecipes = (inputValue) => {
-    let filteredRecipes = recipes.filter(recipe => recipe.name.toLowerCase().includes(inputValue.toLowerCase()))
-    setFilteredRecipes([...filteredRecipes])
+  const getFilterRecipes = (searchSelection, inputValue) => {
+    let filteredRecipes;
+    if (searchSelection === 'recipe') {
+      filteredRecipes = recipes.filter(recipe => recipe.name.toLowerCase().includes(inputValue.toLowerCase()))
+    } else {
+      filteredRecipes = recipes.filter(recipe => {
+        recipe.ingredients.map(ingredient => ingredient.toLowerCase().includes(inputValue.toLowerCase()));
+        // console.log('ING', ingredients)
+        console.log('INPUT', inputValue)
+        console.log('Matching Recipe', recipe)
+        return recipe
+      })
+    }
+    console.log(filteredRecipes)
+    setFilteredRecipes([...filteredRecipes])      
+    // let filteredRecipes = recipes.filter(recipe => recipe.name.toLowerCase().includes(inputValue.toLowerCase()))
+    // setFilteredRecipes([...filteredRecipes])
   }
 
   const getSelectedRecipe = (id) => {

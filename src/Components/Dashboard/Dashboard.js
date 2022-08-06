@@ -21,7 +21,6 @@ const Dashboard = ({ bookMarkedRecipes }) => {
       <article>
         { savedToDash.length ? savedToDash : <p>You don't have any book marked recipes yet</p> }
       </article>
-
     </section>
   )
 };
