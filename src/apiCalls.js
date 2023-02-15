@@ -1,3 +1,3 @@
 export const fetchApi = () => {
-  return fetch(`https://mediterranean-recipes-api.vercel.app/v1/recipes`)
+  return fetch(`https://mediterranean-recipes-1tmijpbeg-lschnell8.vercel.app/v1/recipes`)
 }
