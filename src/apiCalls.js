@@ -1,3 +1,3 @@
 export const fetchApi = () => {
-  return fetch(`https://guarded-oasis-26838.herokuapp.com/api/v1/recipes`)
+  return fetch(`https://mediterranean-recipes.fly.dev/api/v1/recipes`)
 }
