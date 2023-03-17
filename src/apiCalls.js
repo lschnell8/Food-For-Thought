@@ -1,3 +1,3 @@
 export const fetchApi = () => {
-  return fetch(`https://mediterranean-recipes-api.vercel.app.json?api-key=${process.env.PROJECT_ID}`)
+  return fetch(`https://mediterranean-recipes.fly.dev/api/v1/recipes`)
 }
