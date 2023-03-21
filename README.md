@@ -51,5 +51,9 @@ This was a 5 day long Turing School of Software and Design Module 3 final solo p
 ![NPM](https://img.shields.io/badge/NPM-%23000000.svg?style=for-the-badge&logo=npm&logoColor=white)
 
 ![Heroku](https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white)
-
+<img
+      alt="Fly.io"
+      src="https://fly.io/static/images/brand/logo-landscape-inverted.svg"
+      height="30"
+    />
 ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
